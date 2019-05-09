@@ -1,12 +1,12 @@
 <template>
   <!-- note list -->
   <div class="notes">
-    <div class="note" :class="{ full: !grid, standart: note.priority == 'Standart', important: note.priority == 'Important', veryImportant: note.priority == 'Very Important' }" v-for="(note, index) in notes" :key="index" >
+    <div class="note" :class="{ full: !grid }" v-for="(note, index) in notes" :key="index" >
       <div class="note-header" :class="{ full: !grid }">
 				<p class="note-title"> {{ note.title }} </p>
         <p style="cursor: pointer;" @click="removeNote(index)">x</p>
       </div>
-      <div class="note-body">
+      <div class="note-body" :class="note.priority">
         <p> {{ note.descr }} </p>
         <span> {{ note.date }} </span>
       </div>
@@ -101,12 +101,12 @@ export default {
   }
 }
 .standart {
-	border: 1px solid green;
+	color: #a1bd57;
 }
 .important {
-	border: 1px solid yellow;
+	color: #7a98e5;
 }
 .veryImportant {
-	border: 1px solid red;
+	color: #f9895e;
 }
 </style>

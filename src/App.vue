@@ -64,25 +64,25 @@ export default {
         note: {
           title: '',
 					descr: '',
-					priority:'Standart'
+					priority:'standart'
         },
         notes: [
           {
             title: 'First Note',
 						descr: 'Description for first note',
-						priority: 'Standart',
+						priority: 'standart',
             date: new Date(Date.now()).toLocaleString()
           },
           {
             title: 'Second Note',
 						descr: 'Description for second note',
-						priority: 'Important',
+						priority: 'important',
             date: new Date(Date.now()).toLocaleString()
           },
           {
             title: 'Third Note',
 						descr: 'Description for third note',
-						priority: 'Very Important',
+						priority: 'veryImportant',
             date: new Date(Date.now()).toLocaleString()
           }
         ]
@@ -124,7 +124,7 @@ export default {
         this.message = null
         this.note.title = ''
 				this.note.descr = ''
-				this.note.priority = 'Standart'
+				this.note.priority = 'standart'
     },
     removeNote (index) {
       this.notes.splice(index, 1)

@@ -6,12 +6,12 @@
     <label>Description</label>
     <textarea v-model="note.descr"></textarea>
     <div class="option-list">
-      <input class="priority" type="radio" id="radioStandart" value="Standart" v-model="note.priority">
-      <label for="radioStandart">Standart</label>
-      <input class="priority" type="radio" id="radioImportant" value="Important" v-model="note.priority">
-      <label for="radioImportant">Important</label>
-      <input class="priority" type="radio" id="radioVeryImportant" value="Very Important" v-model="note.priority">
-      <label for="radioVeryImportant">Very Important</label>
+			<label>Standart</label>
+      <input class="priority" type="radio" value="standart" v-model="note.priority">
+      <label>Important</label>
+      <input class="priority" type="radio" value="important" v-model="note.priority">
+      <label>Very Important</label>
+      <input class="priority" type="radio" value="veryImportant" v-model="note.priority">
     </div>
     <button class="btn btnPrimary" @click="addNote">New note</button>
   </div>
@@ -40,12 +40,16 @@ export default {
 .option-list {
   display: flex;
   margin: 20px 0;
+	align-items: center;
   .priority {
-    margin-right: 12px;
+    margin: 0 12px 0 0;
     font-weight: bold;
+		height: 20px;
+		width: 20px;
   }
   label {
-    margin-right: 20px;
+    margin: 0 20px 0 0;
+		box-shadow: none;
     &:last-child {
       margin-right: 0;
     }
